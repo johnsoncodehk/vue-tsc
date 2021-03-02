@@ -5,21 +5,7 @@ exports.createProgramProxy = createProgramProxy;
 
 function createProgramProxy(options) {
 
-    const parseConfigHost = {
-        useCaseSensitiveFileNames: options.host.useCaseSensitiveFileNames(),
-        readDirectory: (path, extensions, exclude, include, depth) => {
-            return options.host.readDirectory(path, ['.vue'], exclude, include, depth);
-        },
-        fileExists: fileName => options.host.fileExists(fileName),
-        readFile: fileName => options.host.readFile(fileName),
-    };
-    const { fileNames: vueFileNames } = ts.parseJsonConfigFileContent({}, parseConfigHost, options.host.getCurrentDirectory(), options.options);
-
-    const fileNames = [
-        ...options.rootNames,
-        ...vueFileNames,
-    ];
-
+    const fileNames = [...options.rootNames, ...getVueFileNames()];
     const scriptSnapshots = new Map();
     const vueLsHost = {
         ...options.host,
@@ -31,10 +17,22 @@ function createProgramProxy(options) {
         getProjectVersion: () => '',
     };
     const vueLs = vue.createLanguageService(vueLsHost, { typescript: ts });
-    const program = vueLs.tsProgramProxy; // TODO: use proxy program
+    const program = vueLs.tsProgramProxy;
 
     return program;
 
+    function getVueFileNames() {
+        const parseConfigHost = {
+            useCaseSensitiveFileNames: options.host.useCaseSensitiveFileNames(),
+            readDirectory: (path, extensions, exclude, include, depth) => {
+                return options.host.readDirectory(path, ['.vue'], exclude, include, depth);
+            },
+            fileExists: fileName => options.host.fileExists(fileName),
+            readFile: fileName => options.host.readFile(fileName),
+        };
+        const { fileNames } = ts.parseJsonConfigFileContent({}, parseConfigHost, options.host.getCurrentDirectory(), options.options);
+        return fileNames;
+    }
     function getScriptSnapshot(fileName) {
         const scriptSnapshot = scriptSnapshots.get(fileName);
         if (scriptSnapshot) {

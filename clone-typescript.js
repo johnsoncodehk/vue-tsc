@@ -2,8 +2,8 @@ const ts = require('typescript');
 const path = require('path');
 const fs = require('fs-extra');
 
-const tsDirFrom = path.resolve(path.join('.', 'node_modules', 'typescript'));
-const tsDirTo = path.resolve(path.join('.', 'typescript'));
+const tsDirFrom = path.join(__dirname, 'node_modules', 'typescript');
+const tsDirTo = path.join(__dirname, 'typescript');
 const tscFile = path.join(tsDirTo, 'lib', 'tsc.js');
 
 if (fs.existsSync(tsDirFrom)) {

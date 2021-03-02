@@ -1,3 +1,3 @@
 # vue-tsc
 
-`vue-tsc --noEmit && vite`
+`vue-tsc --noEmit && vite build`

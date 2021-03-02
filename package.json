@@ -1,6 +1,12 @@
 {
   "name": "vue-tsc",
-  "version": "0.0.7",
+  "version": "0.1.0",
+  "files": [
+    "typescript",
+    "proxy.js",
+    "volar.vsix",
+    "vue-tsc.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/johnsoncodehk/vue-tsc.git"
@@ -13,7 +19,7 @@
     "prepack": "node ./clone-typescript"
   },
   "bin": {
-    "vue-tsc": "./bin/vue-tsc.js"
+    "vue-tsc": "./vue-tsc.js"
   },
   "dependencies": {
     "unzipper": "latest"
