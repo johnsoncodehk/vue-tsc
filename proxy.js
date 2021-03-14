@@ -1,11 +1,16 @@
 const ts = require('./typescript');
 const vue = require('./volar/extension/node_modules/@volar/vscode-vue-languageservice');
+const path = require('path');
 
 exports.createProgramProxy = createProgramProxy;
 
 function createProgramProxy(options) {
 
-    const fileNames = [...options.rootNames, ...getVueFileNames()];
+    if (!options.options.noEmit) {
+        throw 'emit mode is not yet support';
+    }
+
+    const fileNames = [...options.rootNames.map(rootName => options.host.realpath(rootName)), ...getVueFileNames()];
     const scriptSnapshots = new Map();
     const vueLsHost = {
         ...options.host,
@@ -30,8 +35,13 @@ function createProgramProxy(options) {
             fileExists: fileName => options.host.fileExists(fileName),
             readFile: fileName => options.host.readFile(fileName),
         };
-        const { fileNames } = ts.parseJsonConfigFileContent({}, parseConfigHost, options.host.getCurrentDirectory(), options.options);
-        return fileNames;
+        const tsConfig = options.options.configFilePath;
+        if (tsConfig) {
+            const tsConfigFile = ts.readJsonConfigFile(tsConfig, options.host.readFile);
+            const { fileNames } = ts.parseJsonSourceFileConfigFileContent(tsConfigFile, parseConfigHost, options.host.getCurrentDirectory(), options.options, path.basename(tsConfig));
+            return fileNames;
+        }
+        return [];
     }
     function getScriptSnapshot(fileName) {
         const scriptSnapshot = scriptSnapshots.get(fileName);
