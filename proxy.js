@@ -38,7 +38,7 @@ function createProgramProxy(options) {
         const tsConfig = options.options.configFilePath;
         if (tsConfig) {
             const tsConfigFile = ts.readJsonConfigFile(tsConfig, options.host.readFile);
-            const { fileNames } = ts.parseJsonSourceFileConfigFileContent(tsConfigFile, parseConfigHost, options.host.getCurrentDirectory(), options.options, path.basename(tsConfig));
+            const { fileNames } = ts.parseJsonSourceFileConfigFileContent(tsConfigFile, parseConfigHost, path.dirname(tsConfig), options.options, path.basename(tsConfig));
             return fileNames;
         }
         return [];
