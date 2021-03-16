@@ -4,6 +4,10 @@
 
 ## Versions
 
+**0.0.12**
+- TypeScript: 4.2.3
+- Volar: 0.22.14
+
 **0.0.11**
 - TypeScript: 4.2.3
 - Volar: 0.22.12
