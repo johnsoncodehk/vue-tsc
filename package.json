@@ -22,7 +22,7 @@
     "vue-tsc": "./vue-tsc.js"
   },
   "dependencies": {
-    "unzipper": "latest"
+    "unzipper": "0.10.11"
   },
   "devDependencies": {
     "@types/node": "latest",
