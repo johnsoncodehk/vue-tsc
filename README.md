@@ -2,6 +2,8 @@
 
 `vue-tsc --noEmit && vite build`
 
+Vue 3 command line Type-Checking tool base on IDE plugin [Volar](https://github.com/johnsoncodehk/volar).
+
 ## Versions
 
 | vue-tsc | TypeScript | Volar   |
