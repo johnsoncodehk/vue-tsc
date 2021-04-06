@@ -1,6 +1,6 @@
 {
   "name": "vue-tsc",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "files": [
     "typescript",
     "proxy.js",
