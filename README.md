@@ -8,6 +8,7 @@ Vue 3 command line Type-Checking tool base on IDE plugin [Volar](https://github.
 
 | vue-tsc | TypeScript | Volar                                                                                                    |
 |---------|------------|----------------------------------------------------------------------------------------------------------|
+| 0.0.24  | 4.2.3      | 0.24.0                                                                                                   |
 | 0.0.23  | 4.2.3      | 0.23.7 [09261d9](https://github.com/johnsoncodehk/volar/commit/09261d9c8c8beb720fe1f8ea807297802406ff05) |
 | 0.0.22  | 4.2.3      | 0.23.7                                                                                                   |
 | 0.0.21  | 4.2.3      | 0.23.4                                                                                                   |
