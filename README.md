@@ -37,6 +37,7 @@ Please ask to [Volar Discord](https://discord.gg/5bnSSSSBbK).
 
 | vue-tsc | TypeScript | Volar   |
 |---------|------------|---------|
+| 0.0.26  | 4.2.3      | 0.24.6  |
 | 0.0.25  | 4.2.3      | 0.24.1  |
 | 0.0.24  | 4.2.3      | 0.24.0  |
 | 0.0.22  | 4.2.3      | 0.23.7  |
