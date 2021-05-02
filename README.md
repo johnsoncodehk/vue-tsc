@@ -7,7 +7,7 @@ Vue 3 command line Type-Checking tool base on IDE plugin [Volar](https://github.
 Features:
 
 - [x] Type-Checking with `--noEmit`
-- [ ] Use released LSP module
+- [x] Use released LSP module
 - [ ] Watch mode support
 
 ## Navigation

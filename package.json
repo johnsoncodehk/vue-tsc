@@ -4,7 +4,6 @@
   "files": [
     "typescript",
     "proxy.js",
-    "volar.vsix",
     "vue-tsc.js"
   ],
   "repository": {
@@ -22,7 +21,7 @@
     "vue-tsc": "./vue-tsc.js"
   },
   "dependencies": {
-    "unzipper": "0.10.11"
+    "vscode-vue-languageservice": "^0.25.0"
   },
   "devDependencies": {
     "@types/node": "latest",

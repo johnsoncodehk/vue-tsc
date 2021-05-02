@@ -1,5 +1,5 @@
 const ts = require('./typescript');
-const vue = require('./volar/extension/node_modules/@volar/vscode-vue-languageservice');
+const vue = require('vscode-vue-languageservice');
 const path = require('path');
 
 exports.createProgramProxy = createProgramProxy;
@@ -21,8 +21,8 @@ function createProgramProxy(options) {
         getScriptSnapshot,
         getProjectVersion: () => '',
     };
-    const vueLs = vue.createLanguageService(vueLsHost, { typescript: ts });
-    const program = vueLs.tsProgramProxy;
+    const vueLs = vue.createLanguageService({ typescript: ts }, vueLsHost);
+    const program = vueLs.__internal__.tsProgramProxy;
 
     return program;
 
