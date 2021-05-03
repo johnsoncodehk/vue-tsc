@@ -3,22 +3,17 @@
   "version": "0.1.0",
   "files": [
     "typescript",
-    "proxy.js",
-    "vue-tsc.js"
+    "proxy.js"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/johnsoncodehk/vue-tsc.git"
   },
-  "bugs": {
-    "url": "https://github.com/johnsoncodehk/vue-tsc/issues"
-  },
-  "homepage": "https://github.com/johnsoncodehk/vue-tsc#readme",
   "scripts": {
     "prepack": "node ./clone-typescript"
   },
   "bin": {
-    "vue-tsc": "./vue-tsc.js"
+    "vue-tsc": "./typescript/lib/tsc.js"
   },
   "dependencies": {
     "vscode-vue-languageservice": "^0.25.0"

@@ -2467,7 +2467,7 @@ vscode-uri@^3.0.2:
   resolved "https://registry.yarnpkg.com/vscode-uri/-/vscode-uri-3.0.2.tgz#ecfd1d066cb8ef4c3a208decdbab9a8c23d055d0"
   integrity sha512-jkjy6pjU1fxUvI51P+gCsxg1u2n8LSt0W6KrCNQceaziKzff74GoWmjVG46KieVzybO1sttPQmYfrwSHey7GUA==
 
-vscode-vue-languageservice@0.25.0:
+vscode-vue-languageservice@^0.25.0:
   version "0.25.0"
   resolved "https://registry.yarnpkg.com/vscode-vue-languageservice/-/vscode-vue-languageservice-0.25.0.tgz#ca08ba06955006d02d9687ac35ed993a5cb4a8ae"
   integrity sha512-5ysB9tE4fZT0MDcmaJUGtN6pvExfXJr/Uf28uKN/IjcOAq25hrIqwt8pW6OyXkQXWxCBBoXMMxhg1RlbyaytNg==
