@@ -14,7 +14,7 @@
     "prepack": "node ./clone-typescript"
   },
   "bin": {
-    "vue-tsc": "./typescript/lib/tsc.js"
+    "vue-tsc": "./typescript/bin/tsc"
   },
   "dependencies": {
     "vscode-vue-languageservice": "^0.25.2"
