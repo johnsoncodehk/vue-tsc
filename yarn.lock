@@ -2488,10 +2488,10 @@ vscode-uri@^3.0.2:
   resolved "https://registry.yarnpkg.com/vscode-uri/-/vscode-uri-3.0.2.tgz#ecfd1d066cb8ef4c3a208decdbab9a8c23d055d0"
   integrity sha512-jkjy6pjU1fxUvI51P+gCsxg1u2n8LSt0W6KrCNQceaziKzff74GoWmjVG46KieVzybO1sttPQmYfrwSHey7GUA==
 
-vscode-vue-languageservice@0.25.6:
-  version "0.25.6"
-  resolved "https://registry.yarnpkg.com/vscode-vue-languageservice/-/vscode-vue-languageservice-0.25.6.tgz#acca46be01b2c9426d617feebe87669e373dae32"
-  integrity sha512-996YtwBLKnKS74iqxevr5zwkMJobVhSsUPAjHEl/TRMPPNsw902HgAk45Q4i7E5OjiMOi4VnMSioMItUm4SCHQ==
+vscode-vue-languageservice@^0.25.11:
+  version "0.25.11"
+  resolved "https://registry.yarnpkg.com/vscode-vue-languageservice/-/vscode-vue-languageservice-0.25.11.tgz#cc40a3418b90cf9430588438681d051292ba0b09"
+  integrity sha512-PyMqzaJVu/o0uNz60eBqgm2ggchuER3SstYY+2yIva46g+8o/4vaQD1ZnLYanncAxtk1sHlcAJPX9llWoGEoPA==
   dependencies:
     "@starptech/prettyhtml" "^0.10.0"
     "@volar/code-gen" "^0.25.4"

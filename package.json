@@ -17,7 +17,7 @@
     "vue-tsc": "./typescript/bin/tsc"
   },
   "dependencies": {
-    "vscode-vue-languageservice": "0.25.6"
+    "vscode-vue-languageservice": "^0.25.11"
   },
   "devDependencies": {
     "@types/node": "latest",
