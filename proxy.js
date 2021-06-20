@@ -1,4 +1,4 @@
-const ts = require('./typescript');
+const ts = require('typescript/lib/tsserver');
 const vue = require('vscode-vue-languageservice');
 const path = require('path');
 

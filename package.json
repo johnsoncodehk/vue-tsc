@@ -3,6 +3,7 @@
   "version": "0.1.7",
   "license": "MIT",
   "files": [
+    "bin",
     "typescript",
     "proxy.js"
   ],
@@ -14,10 +15,13 @@
     "prepack": "node ./clone-typescript"
   },
   "bin": {
-    "vue-tsc": "./typescript/bin/tsc"
+    "vue-tsc": "./bin/vue-tsc.js"
   },
   "dependencies": {
     "vscode-vue-languageservice": "^0.25.17"
+  },
+  "peerDependencies": {
+    "typescript": "*"
   },
   "devDependencies": {
     "@types/node": "latest",

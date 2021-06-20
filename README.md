@@ -8,6 +8,8 @@ Features:
 
 - [x] Type-Checking with `--noEmit`
 - [x] Use released LSP module
+- [x] Make `typescript` as peerDependencies
+- [ ] Cleaner dependencies (remove `prettyhtml`, `prettier` etc.)
 - [ ] Watch mode support
 
 ## Navigation
