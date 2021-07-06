@@ -13,10 +13,12 @@ require = (modName) => {
         const handler = {
             apply: function (target, thisArg, argumentsList) {
                 if (typeof argumentsList[0] === 'string') {
-                    const path = require('path');
+                    const path = _require('path');
                     const relative = path.relative(__dirname, argumentsList[0]);
                     if (relative && !relative.startsWith('..') && !path.isAbsolute(relative)) {
-                        argumentsList[0] = path.resolve(__dirname, '..', '..', '..', 'typescript', 'lib', relative);
+                        const tsPath = _require.resolve('typescript');
+                        const tsLibPath = path.dirname(tsPath);
+                        argumentsList[0] = path.resolve(tsLibPath, relative);
                     }
                 }
                 return target.apply(thisArg, argumentsList);
