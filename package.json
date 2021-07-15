@@ -18,7 +18,7 @@
     "vue-tsc": "./bin/vue-tsc.js"
   },
   "dependencies": {
-    "vscode-vue-languageservice": "^0.25.22"
+    "vscode-vue-languageservice": "^0.26.0"
   },
   "peerDependencies": {
     "typescript": "*"
