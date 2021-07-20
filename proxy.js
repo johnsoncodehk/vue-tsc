@@ -1,10 +1,8 @@
-const ts = require('typescript/lib/tsserver');
+const ts = require('typescript/lib/tsserverlibrary');
 const vue = require('vscode-vue-languageservice');
 const path = require('path');
 
-exports.createProgramProxy = createProgramProxy;
-
-function createProgramProxy(options) {
+exports.createProgramProxy = (options) => {
 
     if (!options.options.noEmit) {
         throw 'emit mode is not yet support';
