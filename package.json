@@ -18,10 +18,5 @@
   },
   "peerDependencies": {
     "typescript": "*"
-  },
-  "devDependencies": {
-    "@types/node": "latest",
-    "@types/fs-extra": "latest",
-    "fs-extra": "latest"
   }
 }
