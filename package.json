@@ -4,15 +4,11 @@
   "license": "MIT",
   "files": [
     "bin",
-    "typescript",
     "proxy.js"
   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/johnsoncodehk/vue-tsc.git"
-  },
-  "scripts": {
-    "prepack": "node ./clone-typescript"
   },
   "bin": {
     "vue-tsc": "./bin/vue-tsc.js"
@@ -26,7 +22,6 @@
   "devDependencies": {
     "@types/node": "latest",
     "@types/fs-extra": "latest",
-    "fs-extra": "latest",
-    "typescript": "latest"
+    "fs-extra": "latest"
   }
 }
